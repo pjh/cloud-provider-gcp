@@ -1,11 +1,15 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
 
+# Windows example:
+# https://github.com/kubernetes/kubernetes/blob/master/pkg/util/mount/BUILD#L53
 go_library(
     name = "go_default_library",
     srcs = [
         "alt_token_source.go",
         "cache.go",
         "main.go",
+        "open_tpm_other.go",
+        "open_tpm_windows.go",
         "request.go",
         "tpm.go",
     ],
